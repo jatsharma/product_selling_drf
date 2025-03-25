@@ -127,7 +127,7 @@ All product responses include:
     "product_name": "Example Product",
     "created_by": "username",
     "created_at": "2024-03-25T12:00:00Z",
-    "last_bought_time": null,
+    "bought_time": null,
     "bought_by": null,
     "is_sold": false,
     "is_visible": true

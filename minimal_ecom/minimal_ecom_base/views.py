@@ -79,14 +79,14 @@ class ProductViewSet(mixins.CreateModelMixin,
             )
         
         product.bought_by = request.user
-        product.last_bought_time = timezone.now()
+        product.bought_time = timezone.now()
         product.expire_at = None  # Remove expiration when bought
         product.save()
         
         return Response({
             'status': 'Product bought successfully',
             'bought_by': request.user.username,
-            'bought_at': product.last_bought_time
+            'bought_at': product.bought_time
         })
 
     @action(detail=False, methods=['get'])

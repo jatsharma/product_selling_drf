@@ -11,7 +11,7 @@ class Product(models.Model):
     created_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='products')
     product_id = models.AutoField(primary_key=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    last_bought_time = models.DateTimeField(null=True, blank=True)
+    bought_time = models.DateTimeField(null=True, blank=True)
     product_name = models.CharField(max_length=255)
     bought_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True, related_name='bought_products')
     expire_at = models.DateTimeField(null=True, blank=True)
