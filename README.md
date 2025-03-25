@@ -130,7 +130,7 @@ All product responses include:
     "last_bought_time": null,
     "bought_by": null,
     "is_sold": false,
-    "expire_at": "2024-03-25T12:02:00Z"
+    "is_visible": true
 }
 ```
 
